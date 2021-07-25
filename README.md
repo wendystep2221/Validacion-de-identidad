@@ -13,16 +13,16 @@ Con la intención de determinar cuando una persona podría estar mintiendo se an
 
 # Contenido
 
-1. [Procesamiento y modelamiento de datos](#Procesamiento-y-modelamiento-de-datos)
+#### [Procesamiento y modelamiento de datos](#Procesamiento-y-modelamiento-de-datos)
 
-    1. [Datos de video](#Datos-de-video)
-        1. [Pre-procesamiento de imagen](#Pre-procesamiento-de-imagen)
-        2. [Construcción del conjunto de datos](#Construcción-del-conjunto-de-datos) 
-        3. [Modelo de validación de identidad con imagenes](#Modelo-de-validación-de-identidad-con-imagenes)
-    2. [Datos de Audio](#Datos-de-Audio)
-        1. [Preprocesamiento del audio (Audio a espectograma)](#Preprocesamiento-del-audio-(Audio-a-espectograma))
-        2. [Construcción del conjunto de datos](#Construcción-del-conjunto-de-datos)
-        3. [Modelo estrés de voz](#Modelo-estrés-de-voz)
+1. [Datos de video](#Datos-de-video)
+    1. [Pre-procesamiento de imagen](#Pre-procesamiento-de-imagen)
+    2. [Construcción del conjunto de datos](#Construcción-del-conjunto-de-datos) 
+    3. [Modelo de validación de identidad con imagenes](#Modelo-de-validación-de-identidad-con-imagenes)
+2. [Datos de Audio](#Datos-de-Audio)
+    1. [Preprocesamiento del audio (Audio a espectograma)](#Preprocesamiento-del-audio-(Audio-a-espectograma))
+    2. [Construcción del conjunto de datos](#Construcción-del-conjunto-de-datos)
+    3. [Modelo estrés de voz](#Modelo-estrés-de-voz)
 
 # Procesamiento y modelamiento de datos
 ## Datos de video
