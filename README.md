@@ -1,17 +1,23 @@
 # Validación de identidad
-El objetivo de este repositorio es generar dos estrategias de validación de identidad para una persona.
+El objetivo de este repositorio es generar dos estrategias de validación de identidad para una persona: reconocimiento facial y estrés de voz.
 
 Para la validación, usando la cámara y micrófono del dispositivo en uso se pedirá a la persona responder ciertas preguntas acerca de su identidad, adicional a ello se pedirá una fotografía del documento original de identidad de la persona donde se encuentre una fotografía.
 
 ## Reconocimiento facial
 Para el reconocimiento facial se requieren dos inputs: Foto de un documento de identidad donde se vea el rostro, video de su rostro tomado en el momento de hacer la validación.
-[Imagen ejemplo]
-
 Durante la toma del video se pide a la responder ciertas preguntas frente a la camára, del video resultante se extraen 3 frames los cuales serán comparados con la fotografia de rostro reconocida en el documento de identidad se valida la coincidencia en las imágenes.
 
 ## Estres de voz
 
 Con la intención de determinar cuando una persona podría estar mintiendo se analiza el audio recogido en el video inicial donde la persona responde preguntas acerca de su identidad, (Ej. se pide decir viendo a la camara yo soy.. con .... años de edad, mi fecha de nacimiento es ..... vivo en la ciudad de...), este audio será sometido a una prueba de estres de voz donde se determina el estres en la voz al responder las preguntas. Con eso se puede asumir que una voz estresada o en otras palabras nerviosa  puede relacionarse con el acto de mentir.
+
+# Contenido
+
+1. [Procesamiento y modelamiento de datos](#Procesamiento-y-modelamiento-de-datos)
+  1. [Datos de video](#Datos-de-video)
+  2. [Pre-procesamiento de imagen](#Pre-procesamiento-de-imagen)
+
+
 
 # Procesamiento y modelamiento de datos
 ## Datos de video
@@ -32,7 +38,6 @@ El objetivo es conectar el programa a la camará de algún dispositivo a disposi
 ![proceso_video](imagenes/video_proceso.PNG)
 
 #### Construcción del conjunto de datos
-# Conjunto base
 
 Para el entrenamiento de reconocimiento de rostro se usará como base el conjunto de datos [YALE FACE DATABASE](http://vision.ucsd.edu/content/yale-face-database) donde se tiene el rostro de  15 personas con 11 fotos por persona,una por cada expresión o configuración facial diferente: 
 1. luz central
@@ -62,5 +67,9 @@ El objetivo es combinar por pares de fotografias, esta tarea se dicide en dos pa
 
 3. Se asigna el target a cada parreja de rostros, si los rostros pertencen a la misma persona, el target será 1, de lo contrario será 0.
 
+
+#### Modelo de validación de identidad con imagenes
+
+## Datos de Audio
 
 
