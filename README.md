@@ -56,7 +56,11 @@ El objetivo es combinar por pares de fotografias, esta tarea se dicide en dos pa
 
 ![yalefaces](imagenes/proceso_cara.PNG)
 
-2. construir las parejas definidas anteriormente de imagenes en un solo tensor, es decor, el tensor resultante tendrá 2 canales, en cada canal un rostro.
+2. Cada posible pareja de imagenes se almacena en un solo tensor, es decir, el tensor resultante tendrá 2 canales, en cada canal un rostro.
 
 ![yalefaces](imagenes/Par_rostros.PNG)
+
+3. Se asigna el target a cada parreja de rostros, si los rostros pertencen a la misma persona, el target será 1, de lo contrario será 0.
+
+
 
