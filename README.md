@@ -12,3 +12,20 @@ Durante la toma del video se pide a la responder ciertas preguntas frente a la c
 ## Estres de voz
 
 Con la intención de determinar cuando una persona podría estar mintiendo se analiza el audio recogido en el video inicial donde la persona responde preguntas acerca de su identidad, (Ej. se pide decir viendo a la camara yo soy.. con .... años de edad, mi fecha de nacimiento es ..... vivo en la ciudad de...), este audio será sometido a una prueba de estres de voz donde se determina el estres en la voz al responder las preguntas. Con eso se puede asumir que una voz estresada o en otras palabras nerviosa  puede relacionarse con el acto de mentir.
+
+# Procesamiento y modelamiento de datos
+## Datos de video
+###  Pre-procesamiento de imagen
+El proyecto tendrá como objetivo la identificacion de rostro. 
+Para esto se usará una red pre-entrenada ([dlib face recognition](http://dlib.net/)) que es capaz de reconocer el area del rostro posando de manera frontal.
+
+
+## Propuesta de pre-procesamiento del dato
+
+El objetivo es conectar el programa a la camará de algún dispositivo a disposición del usuario:
+
+1. Del video se extraerán imagenes
+
+2. De cada imagen se identificará el rostro eliminando información no util, por ejemplo, el fondo, las orejas, cabello y cuello.
+3. Se pone en escala de grises
+4. Se redimensionan las imagenes
