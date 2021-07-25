@@ -14,8 +14,9 @@ Con la intención de determinar cuando una persona podría estar mintiendo se an
 # Contenido
 
 1. [Procesamiento y modelamiento de datos](#Procesamiento-y-modelamiento-de-datos)
-  1. [Datos de video](#Datos-de-video)
-  2. [Pre-procesamiento de imagen](#Pre-procesamiento-de-imagen)
+
+    1. [Datos de video](#Datos-de-video)
+    2. [Pre-procesamiento de imagen](#Pre-procesamiento-de-imagen)
 
 
 
