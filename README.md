@@ -7,7 +7,7 @@ Para la validación, usando la cámara y micrófono del dispositivo en uso se pe
 Para el reconocimiento facial se requieren dos inputs: Foto de un documento de identidad donde se vea el rostro, video de su rostro tomado en el momento de hacer la validación.
 Durante la toma del video se pide a la responder ciertas preguntas frente a la camára, del video resultante se extraen 3 frames los cuales serán comparados con la fotografia de rostro reconocida en el documento de identidad se valida la coincidencia en las imágenes.
 
-## Estres de voz
+## Estrés de voz
 
 Con la intención de determinar cuando una persona podría estar mintiendo se analiza el audio recogido en el video inicial donde la persona responde preguntas acerca de su identidad, (Ej. se pide decir viendo a la camara yo soy.. con .... años de edad, mi fecha de nacimiento es ..... vivo en la ciudad de...), este audio será sometido a una prueba de estres de voz donde se determina el estres en la voz al responder las preguntas. Con eso se puede asumir que una voz estresada o en otras palabras nerviosa  puede relacionarse con el acto de mentir.
 
@@ -94,6 +94,7 @@ La evaluación del desempeño del algorítmo se realiza con base en la matriz de
 ## Datos de Audio
 
 Los datos de audio serán extraidos del video que se proporcione inicialmente.
+
 ![audiop](imagenes/audio_p.PNG)
 
 ### Preprocesamiento del audio (Audio a espectograma)
