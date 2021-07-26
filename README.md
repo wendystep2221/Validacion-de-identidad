@@ -159,7 +159,9 @@ Se proponen tres diferentes modelos pre entrenados a usar: InceptionV3, MobileNe
 * Una capa de BatchNormalization luego de la segunda convolución.
 *  Dropout después de cada pooling.
 
-Cómo modelo final se tomó la red entrenada con el modelo MovileNet como base.
+Cómo modelo final se tomó la red entrenada con el modelo [MobileNet](https://github.com/keras-team/keras-applications/blob/master/keras_applications/mobilenet.py) como base.
+
+La evaluación del modelo se realizará estudiando la matriz de confusión de las predicciones sobre el conjunto de prueba.
 
 ![confusion_video](imagenes/confusion_audio.PNG)
 
