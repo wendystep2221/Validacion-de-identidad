@@ -75,10 +75,26 @@ El objetivo es combinar por pares de fotografias, esta tarea se dicide en dos pa
 
 #### Modelo de validación de identidad con imagenes
 
+El enfoque seleccionado para la identificación de identidad es la incrustación, para esto se realiza una transferencia de conocmiento del modelo preentrenado para reconocimiento facial (para este caso **VGGFace** y **VGG19** ), se omite la última capa densa del modelo y se realizan las predicciones (incrustación) para los datos de imagen preprocesados, es decir, se utiliza toda la red pre-entreada a excepción de la capa de salida para obtener una representación en forma de vector que resuma las característics de las imágenes. Finalmente, cada imagen es representada en un espacio d-dimensional lo cual facilita el uso de métricas de similitud como se presenta acontinuación:
+
+* La arquitectura del modeloe VGGFace puede ser consultada en el siguiente link [VGGFace]('https://gist.github.com/EncodeTS/6bbe8cb8bebad7a672f0d872561782d9')
+* La arquitectura del modeloe VGG19 puede ser consultada en el siguiente link [VGG19]('https://github.com/fchollet/deep-learning-models/blob/master/vgg19.py')
+
+
+####  Calculo de diferencias
+
+Una vez se obtienen las incrustaciones de la imagen captuarada por la cámara de la aplicación y de la foto enviada por el usuario de su cedula, se establece la similitud entre las caras presentes en ambas fotos, para lo cual se utiliza 1 - la distancia coseno, se dice que las fotos corresponden a la misma persona si su similitud es mayor a 0.5 caso contrario se generará una alerta de posible fraude.
+
+#### Evaluación predicción 
+
+La evaluación del desempeño del algorítmo se realiza con base en la matriz de confusión. En este caso se obtuvo una presición de 1.
+
+![confusion_video](imagenes/confusion_video.PNG)
 
 ## Datos de Audio
 
 Los datos de audio serán extraidos del video que se proporcione inicialmente.
+![audiop](imagenes/audio_p.PNG)
 
 ### Preprocesamiento del audio (Audio a espectograma)
 
@@ -137,8 +153,14 @@ Una vez pre-procesados los datos de audio se entrena una red neuronal con modelo
 Se proponen tres diferentes modelos pre entrenados a usar: InceptionV3, MobileNet y VGG19; y se completa la arquitectura de la red:
 
 * Añadiendo 4 capas convolucionales con tamaño de kernel (3, 3) con un número creciente de filtros (16, 32, 32, 64)
+* Se añade Maxpooling2D  despues de cada 2 capas convolucionales.
+* Activación de LeakyReLU despues de cada convolución.
+* Una capa de BatchNormalization luego de la segunda convolución.
+*  Dropout después de cada pooling.
 
+Cómo modelo final se tomó la red entrenada con el modelo MovileNet como base.
 
+![confusion_video](imagenes/confusion_audio.PNG)
 
 
 
